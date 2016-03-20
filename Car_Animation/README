@@ -1,0 +1,67 @@
+Car Animation Simulator
+
+Instructions:
+- The program should start animating as soon as it is executed. It will
+  continue moving until the car has moved through all trees. At this time,
+  the car will stop moving, with its rotating wheels stopped.
+
+- x is defined left (-x) to right (x),
+  y is defined down (-y) to up (y),
+  z is defined into the screen (-z) to towards us (z)
+
+- BUTTONS:
+        1) esc - Clicking esc will exit the program.
+        2) n   - Enables Night Mode.
+        3) d   - Enables Day Mode.
+        4) x   - Change EyeZ in the -z direction.
+        5) z   - Change EyeZ in the z direction.
+        6) left- Change EyeX in the -x direction.
+        7) right-Change EyeX in the x direction.
+        8) up  - Change EyeY in the y direction.
+        9) down - Change EyeY in the -y direction.
+
+Notes:
+
+* CSIF is poor when executing graphics programs, especially when rendering
+  objects. It runs extremely slow, so I used XCode for this project.
+
+
+Works Cited:
+- Discussion
+        * reused animation source code for cube, its movement, glulookat, and
+          gluperspective.  Also, gltranslate and glrotate were very useful.
+
+- //www.opengl.org/
+        * how to implement a cylinder, torus, cube, sphere
+
+- https://www.opengl.org/discussion_boards/showthread.php/131916-Rotation-around-a-point-in-3d
+        * Rotation around a fixed point in 3d.  This helped me with gluLookAt
+          So that i can adjust the eye camera accordingly.
+
+- https://www.opengl.org/discussion_boards/showthread.php/130682-Depth-Test-not-Working
+* This discussion was particularly important for implementing the depth
+          buffer. I implemented the display() similarly to the provided code
+          The znear clipping plane must actually be a positive value and not
+          zero or else the depth buffer wouldnt work. The cube animation
+          given in discussion was fixed after enabling depth buffer.
+          Because I can change the glulookat eye camera, then I can
+          rotate around my created object.
+
+- https://www.opengl.org/discussion_boards/showthread.php/132502-Color-tables
+        * Color table
+
+- https://msdn.microsoft.com/en-us/library/windows/desktop/dd373945(v=vs.85).aspx
+        * helped me with enabling the shading model for my project.  Note that
+          without the alpha value of rgba, the object would not be drawn.
+
+- http://www.opengl-tutorial.org/beginners-tutorials/tutorial-8-basic-shading/
+        * helped me with shading and how to implement it. I had to enable
+          glshading, which initially turned my entire project black and white.
+          then, i used glmaterialfv to shade in the front and back portions
+          of the object to enable color and shadow.
+
+- https://www.opengl.org/sdk/docs/man2/xhtml/glFog.xml
+        * helped me implement the night mode and day mode. Of course, day mode
+          just involves turning off glfog.
+
+
