@@ -1,5 +1,9 @@
 Car Animation Simulator
 
+Notes:
+  I am using XCODE with OPENGL.framework and GLUT.framework libraries linked and
+  OS X Deployment Target: OS X 10.8
+
 Instructions:
 - The program should start animating as soon as it is executed. It will
   continue moving until the car has moved through all trees. At this time,
