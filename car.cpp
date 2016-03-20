@@ -205,7 +205,7 @@ void car(float i)
     glVertex3f(-i+0.1, i-0.15, -i);
     glVertex3f(-i+0.1, i-0.15, i);
     glEnd();
-    
+     
     
     //right, driver
     glBegin(GL_POLYGON);
