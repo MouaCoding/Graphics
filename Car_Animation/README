@@ -24,10 +24,6 @@ Instructions:
         8) up  - Change EyeY in the y direction.
         9) down - Change EyeY in the -y direction.
 
-Notes:
-
-* CSIF is poor when executing graphics programs, especially when rendering
-  objects. It runs extremely slow, so I used XCode for this project.
 
 
 Works Cited:
