@@ -219,3 +219,8 @@ void display()
     
     glClear(GL_COLOR_BUFFER_BIT);
     glLoadIdentity();
+    glDrawPixels(200, 200, GL_RGB, GL_FLOAT, PixelBuffer);
+    
+    glFlush();
+}
+
