@@ -1,0 +1,10 @@
+Works Cited:
+
+http://sol.gfxile.net/tri/index.html
+ - Used to help find the max and min points of triangle
+
+http://joshbeam.com/articles/triangle_rasterization/
+ - scan edge detect and implementation
+
+Textbook
+ - Used the scan line fill
