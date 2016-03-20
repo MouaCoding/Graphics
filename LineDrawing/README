@@ -1,0 +1,17 @@
+
+Notes:
+  Simple Line Drawing Algorithms.  I used DDA and Bresenham's line drawing algorithms from the textbook:
+  Computer Graphics with OpenGL by Hearn Baker
+
+Works Cited:
+
+http://mvscad.blogspot.com/2012/10/bresenhams-line-for-slope-greater-than-1.html
+ - Used to help me find slope greater than 1
+
+https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
+ - Vertical line method: I had to include a special case of when xEnd - x == 0
+   if it was equal to 0, i didnt increment it.
+   Also, instead of incrementing, i decremented for negative slope
+
+Textbook
+ - Used the lineDDA and bresenham's code
