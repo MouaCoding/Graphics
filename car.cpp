@@ -20,7 +20,7 @@ GLfloat vieww = 0.1;
 GLfloat vieww1 = 0.5;
 GLfloat vieww2 = 0.1;
 
-
+ 
 using namespace std;
 void keyboard(unsigned char key,int x, int y);
 static void SpecialKeyFunc( int Key, int x, int y );
