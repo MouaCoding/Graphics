@@ -1,0 +1,75 @@
+NOTES:
+Program is compiled using XCode, OS 10.8, with GLUT and OPENGL frameworks
+
+Instructions:
+1)To use this program, start by right clicking anywhere on the window.
+2)Choose between
+	1. Input Mode
+	2. Edit Mode
+	3. Load
+	4. Save
+	5. Clear
+	6. Degree Change
+		1. Raise by 1
+		2. Raise by n
+		3. Reduce by 1
+	7. Aitken’s Interpolation
+	8. C1 Piecewise Interpolation
+	9. C1 Manual Piecewise Interpolation
+	10. Exit
+3) Right click to change mode.
+4) When done, click Exit
+
+
+MENU
+
+Input Mode
+ - Input Mode requires the user to click points anywhere on the window.  Once at least 3 points are clicked, the program will draw a green Bezier curve starting from point 1 and ending at point 4. 
+
+
+Edit Mode
+ - Edit Mode allows the user to change the behavior of the Bezier curve. The user can edit the curve by dragging the point to any location on the window.  The program will draw a new curve with the new user inputted point. 
+
+
+Load
+ - The Load button loads "outfile" from the current directory and draws your most recently saved Bezier curve. It recognizes an x and y coordinate and can take multiple inputs.
+
+ - The Load button is already in Edit Mode so the user can quickly re-access and edit previous work.
+
+
+Save
+ - The Save button saves all drawn points and pixels set on the current window onto "outfile".  outfile can then be loaded back onto the screen when clicking on the Load button.
+
+Clear
+-	Clears the window, initializes global variables.
+
+Degree Change
+-	Raise by 1 – raises the degree of curve by 1, chooses n+1 control points
+-	Raise by n – raises the degree of curve by n, Type in a number into the terminal 
+-	Reduce by 1 – reduces the degree of curve by 1
+
+Aitken’s Interpolation
+-	Performs Aitken’s interpolation of the curve
+-	Use the slider to slide from [t0,tn].
+
+C1 Piecewise Interpolation
+-	input n number of points, automatically computes the derivative vectors and draws the curves with C1 continuity.
+
+C1 Manual Piecewise Interpolation
+	- Can manually edit the control points, redraws the curve with C1 continuity.
+
+Exit
+ - Exits the program and closes the window.
+
+
+
+Notes:
+Works Cited:
+-http://www.cin.ufpe.br/~mbs/livros/Curves%20and%20Surfaces%20for%20Computer%20Aided%20Geometric%20Design.pdf
+	* Textbook, used for Aitkens and C1 continuity Cubic
+
+
+ - https://en.wikipedia.org/wiki/Bézier_curve
+	* Wikipedia helped me visualize the concept of how to draw the curve.
+
+
