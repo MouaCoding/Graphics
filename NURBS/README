@@ -1,0 +1,60 @@
+NOTES:
+Program is compiled using XCode, OS 10.8, with GLUT and OPENGL frameworks
+
+At startup, a nurbs surface is drawn with a mesh.
+
+Instructions:
+1)To use this program, start by right clicking anywhere on the window.
+2)Choose between
+	1) Add Row/Column
+	2) Delete Row/Column
+	3) Extend Row/Column
+	3) Edit Point
+	4) Rendering Resolution
+	4)No Mesh
+	5) Unrender/Unfill
+	6) Camera View
+	7) Camera Off
+	7) Camera Reset
+	7) Exit
+3) Right click to change mode.
+4) When done, click Exit
+
+
+MENU
+Add Row/Column
+-	Adds a row or column by clicking near the surface
+
+Delete Row/Column
+-	Delete row specified by clicking on a point
+
+Edit Point
+-	Allows the user to edit any point on surface
+
+Render/Fill
+-	Renders the surface, the mesh stays to allow easier interaction.
+
+Unrender/Unfill
+-	Unrenders the surface
+
+Camera View
+-	Allows the user to rotate the camera’s point of view so that the camera can look at the surface from a different perspective.  Press up, down, left, right, z, x to interact with the camera.
+
+
+Exit
+ - Exits the program and closes the window.
+
+
+
+Notes:
+Works Cited:
+http://stackoverflow.com/questions/13500458/opengl-nurbs-surface
+ -basis of my code
+
+-http://stackoverflow.com/questions/20288861/mouse-drag-object-in-opengl-glut
+  right click, left click and drag
+
+ - https://en.wikipedia.org/wiki/Bézier_curve
+	* Wikipedia helped me visualize the concept of how to draw the curve.
+
+
