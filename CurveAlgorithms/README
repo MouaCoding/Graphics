@@ -1,0 +1,66 @@
+NOTES:
+Program is compiled using XCode, OS 10.8, with GLUT and OPENGL frameworks
+
+Instructions:
+1)To use this program, start by right clicking anywhere on the window.
+2)Choose between
+	1. Input Mode
+	2. Edit Mode
+	3. Load
+	4. Save
+	5. Slider
+	6. Part C
+	7. Part D – Tolerance = 1,2,3
+	8. Clear
+	9. Exit
+3) Right click to change mode.
+4) When done, click Exit
+
+
+MENU
+
+Input Mode
+ - Input Mode requires the user to click points anywhere on the window.  Once at least 3 points are clicked, the program will draw a green Bezier curve starting from point 1 and ending at point 5.  The user can draw more than one curve on the screen by clicking more points.
+
+
+Edit Mode
+ - Edit Mode allows the user to change the behavior of the Bezier curve. The user can edit the curve by dragging the point to any location on the window.  The program will draw a new curve with the new user inputted point. 
+
+
+Load
+ - The Load button loads "outfile" from the current directory and draws your most recently saved Bezier curve. It recognizes an x and y coordinate and can take multiple inputs.
+
+ - The Load button is already in Edit Mode so the user can quickly re-access and edit previous work.
+
+
+Save
+ - The Save button saves all drawn points and pixels set on the current window onto "outfile".  outfile can then be loaded back onto the screen when clicking on the Load button.
+
+Slider
+-	The user can “slide” to draw the points of the curve.  Sliding is implemented by clicking anywhere on the slider
+Clear
+-	Clears the window, initializes global variables.
+-	
+Exit
+ - Exits the program and closes the window.
+
+
+
+Notes:
+Works Cited:
+ - http://stackoverflow.com/questions/785097/how-do-i-implement-a-bézier-curve-in-c
+	* How to implement a Bezier curve in C++
+	  I used the code given, This particular question helped me the most in implementing a Bezier curve and how to program it. The idea is simple: you calculate the difference from point to point and find the distance between each point.  Then you set the pixel of a point on the line from the diff of point 1 to diff of point 2.  For a cubic bezier, you have 2 connected lines and then use the diff of the two lines to calculate for where to draw.  Finally, for five points, you repeat the process: so 3lines->2lines->1line and set the pixels.
+
+ - https://en.wikipedia.org/wiki/Bézier_curve
+	* Wikipedia helped me visualize the concept of how to draw the curve.
+
+
+
+
+
+You are allowed to use the OpenGL library, X windows, Motif, or the Forms libraries (or similar ones). A user menu must be provided to interactively specify all the parameters required for the various algorithms.
+a.) Implement a 2D version of the de Casteljau algorithm. Your program must allow a user to specify a set of 2D control points and to “slide” the parameter t in the domain interval [0, 1]. The original polygon, the entire curve, and all the intermediate line segments computed by the de Casteljau algorithm for a particular value of t must be displayed.
+b.) Implement a routine that computes points on a B ́ezier curve directly by using its definition in Bernstein-B ́ezier form. Compare the times that it takes to compute the same number of points on a single curve by using (i) the de Casteljau algorithm and (ii) the Bernstein-B ́ezier representation.
+c.) Implement a routine that subdivides a B ́ezier curve at some value t ∈ [0, 1] into two segments and compute and display the two new control polygons. A user must be able to interactively specify the split value t; draw the new control polygons.
+d.) Implement a routine that performs curve-curve intersection for two B ́ezier curves of arbitrary degrees. A user specifies the control points for the two curves (interactively) and a tolerance ǫ that is used to terminate the iterative intersection process. Display all approximate intersection points found.
