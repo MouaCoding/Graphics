@@ -1,0 +1,85 @@
+NOTES:
+Program is compiled using XCode, OS 10.8, with GLUT and OPENGL frameworks
+
+Instructions:
+1)To use this program, start by right clicking anywhere on the window.
+2)Choose between
+	1. Input Mode
+	2. Edit Mode
+	3. Delete Mode
+	4. Clear
+	5. Degree Change
+		1. Raise by 1
+		2. Raise by n
+		3. Reduce by 1
+	6. Parametrization Type
+		1. Uniform
+		2. Chord Length
+		3. Centripetal
+	7. Aitken’s Interpolation
+	8. C1 Piecewise Interpolation
+	9. C1 Manual Piecewise Interpolation
+	10. C2 Piecewise Interpolation
+	11. De Boor’s Algorithm
+	12. C1 Piecewise Quadratic B-Spline
+	13. Exit
+3) Right click to change mode.
+4) When done, click Exit
+
+
+MENU
+
+Input Mode
+ - Input Mode requires the user to click points anywhere on the window.  Once at least 3 points are clicked, the program will draw a green Bezier curve starting from point 1 and ending at point 4. 
+
+
+Edit Mode
+ - Edit Mode allows the user to change the behavior of the Bezier curve. The user can edit the curve by dragging the point to any location on the window.  The program will draw a new curve with the new user inputted point. 
+
+
+Delete
+- Deletes a point
+
+Clear
+-	Clears the window, initializes global variables.
+
+Degree Change
+-	Raise by 1 – raises the degree of curve by 1, chooses n+1 control points
+-	Raise by n – raises the degree of curve by n, Type in a number into the terminal 
+-	Reduce by 1 – reduces the degree of curve by 1
+
+Aitken’s Interpolation
+-	Performs Aitken’s interpolation of the curve
+-	Use the slider to slide from [t0,tn].
+
+C1 Piecewise Interpolation
+-	input n number of points, automatically computes the derivative vectors and draws the curves with C1 continuity.
+
+C1 Manual Piecewise Interpolation
+	- Can manually edit the control points, redraws the curve with C1 continuity.
+
+C2 Piecewise Interpolation
+-	Does C2 interpolation, based on lecture, computes 3 de boors points and an extra free point and draws the new curve
+
+De Boor’s Algorithm
+-	uses de boors algorithm.  Can change k order by clicking up and down key buttons
+-	up key increments k order, down decrements k order.
+-	K = 4 does not draw through points!!
+
+C1 Piecewise Quadratic B-Spline
+-	computes the n+1 de boor points, then uses quadratic Bezier through points i, new computed point, and i +1.
+-	Averaged the blue and red control polygon and created the purple polygon, drew the curve based on purple.
+Exit
+ - Exits the program and closes the window.
+
+
+
+Notes:
+Works Cited:
+-http://www.cs.mtu.edu/~shene/COURSES/cs3621/NOTES/INT-APP/PARA-centripetal.html
+	*uniform, chord length, centripetal
+
+ - https://en.wikipedia.org/wiki/Bézier_curve
+	* Wikipedia helped me visualize the concept of how to draw the curve.
+
+
